@@ -68,13 +68,13 @@ inquirer
   `# ${data.title}
     
   ## Table on Contents
-  [Description](description)
-  [Installation Instructions](installation instructions)
-  [Usage Information](usage information)
-  [Contribution Guidelines](contribution guidelines)
-  [Test Instructions](test instructions)
-  [License](license)
-  [Questions](questions)
+  1. [Description](#description)
+  2. [Installation](#installation)
+  3. [Usage Information](#usage-information)
+  4. [Contribution Guidelines](#contribution-guidelines)
+  5. [Test Instructions](#test-instructions)
+  6. [License](#license)
+  7. [Questions](#questions)
 
   ## Description
     ${data.Description}
