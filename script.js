@@ -1,90 +1,102 @@
-const fs = require('fs');
-const inquirer = require('inquirer');
+const fs = require("fs");
+const inquirer = require("inquirer");
 const prompt = inquirer.createPromptModule();
 
+// // TODO: Create a function that returns a license badge based on which license is passed in
+// // If there is no license, return an empty string
+// function renderLicenseBadge(license) {}
 
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+// // TODO: Create a function that returns the license link
+// // If there is no license, return an empty string
+// function renderLicenseLink(license) {}
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
+// // TODO: Create a function that returns the license section of README
+// // If there is no license, return an empty string
+// function renderLicenseSection(license) {}
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
+// // TODO: Create a function to generate markdown for README
 
-// TODO: Create a function to generate markdown for README
-
-inquirer.prompt([
+inquirer
+  .prompt([
     {
-        name: 'title',
-        message: 'What would you like your title to be?'
+      type: "input",
+      name: "title",
+      message: "What would you like your title to be?",
     },
     {
-        name: 'license',
-        message: 'What license will you use?',
-        type: 'rawlist',
-        choice: [
-            'MIT',
-            '',
-            ''
-        ],
+      type: "rawlist",
+      name: "license",
+      message: "What license will you use?",
+      choices: [
+        "MIT", 
+        "o", 
+        "m"
+    ],
     },
     {
-        name: 'Description',
-        message: 'Write your description here'
+      type: "input",
+      name: "Description",
+      message: "Write your description here",
     },
     {
-        name: 'Installation',
-        message: 'Write your installation instructions here'
+      type: "input",
+      name: "Installation",
+      message: "Write your installation instructions here",
     },
     {
-        name: 'Usage',
-        message: 'Write your usage information here'
+      type: "input",
+      name: "Usage",
+      message: "Write your usage information here",
     },
     {
-        name: 'Contribution',
-        message: 'Write your contribution guidelines'
+      type: "input",
+      name: "Contribution",
+      message: "Write your contribution guidelines",
     },
     {
-        name: 'Test',
-        message: 'Write your test instructions here'
+      type: "input",
+      name: "Test",
+      message: "Write your test instructions here",
     },
     {
-        name: 'Questions',
-        message: 'Write your questions here'
+      type: "input",
+      name: "Questions",
+      message: "Write your questions here",
     },
-])
-.then(function generateMarkdown(data) {
-      return `# ${data.title}
+  ])
+  .then((data) => fs.writeFileSync('README.md', 
+  `# ${data.title}
     
-      ## Table on Contents
-      [Description](description)
-      [Installation Instructions](installation instructions)
-      [Usage Information](usage information)
-      [Contribution Guidelines](contribution guidelines)
-      [Test Instructions](test instructions)
-      [License](license)
-      [Questions](questions)
-    
-      ## Description
-        ${data.description}
-      ## Installation
-        ${data.installation}
-      ## Usage Information
-        ${data.usage}
-      ## Contribution Guidelines
-        ${data.contribution}
-      ## Test Instructions
-        ${data.test}
-      ## License
-        ${data.license}
-      ## Questions
-        ${data.questions}
-    `;
-    
-    }).then((data) => fs.writeFileSync('README.md', data, 'utf8'));
+  ## Table on Contents
+  [Description](description)
+  [Installation Instructions](installation instructions)
+  [Usage Information](usage information)
+  [Contribution Guidelines](contribution guidelines)
+  [Test Instructions](test instructions)
+  [License](license)
+  [Questions](questions)
 
-    module.exports = generateMarkdown;
+  ## Description
+    ${data.Description}
+
+  ## Installation
+    ${data.Installation}
+
+  ## Usage Information
+    ${data.Usage}
+
+  ## Contribution Guidelines
+    ${data.Contribution}
+
+  ## Test Instructions
+    ${data.Test}
+
+  ## License
+    ${data.license}
+
+  ## Questions
+    ${data.Questions}
+`));
+
+
+// module.exports = generateMarkdown;
