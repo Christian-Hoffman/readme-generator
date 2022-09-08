@@ -64,7 +64,7 @@ inquirer
       message: "Write your questions here",
     },
   ])
-  .then((data) => fs.writeFileSync('README.md', 
+  .then((data) => fs.writeFileSync('testREADME.md', 
   `# ${data.title}
     
   ## Table on Contents
