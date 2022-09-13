@@ -61,7 +61,7 @@ inquirer
       message: "Enter your email",
     },
   ])
-  .then((data) => fs.writeFileSync('testREADME.md', 
+  .then((data) => fs.writeFileSync('README.md', 
   `# ${data.title}
     
   [![License](https://img.shields.io/badge/License-${data.license}-blue.svg)](https://opensource.org/licenses/${data.license})
