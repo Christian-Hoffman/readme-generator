@@ -2,21 +2,6 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 const prompt = inquirer.createPromptModule();
 
-// // TODO: Create a function that returns the license section of README
-// // If there is no license, return an empty string
-function renderLicenseLink(license) {
-  if (license === 'MIT') {
-
-  }
-  if (license === 'apache2.0') {
-
-  }
-  if (license === 'unlicense') {
-
-  }
-}
-
-
 
 inquirer
   .prompt([
@@ -65,11 +50,16 @@ inquirer
       name: "Questions",
       message: "Write your questions here",
     },
-    // {
-    //   type: "input",
-    //   name: "",
-    //   message: "",
-    // },
+    {
+      type: "input",
+      name: "github",
+      message: "Enter your github username",
+    },
+    {
+      type: "input",
+      name: "email",
+      message: "Enter your email",
+    },
   ])
   .then((data) => fs.writeFileSync('testREADME.md', 
   `# ${data.title}
@@ -87,25 +77,26 @@ inquirer
 
 
   ## Description
-    ${data.Description}
+  ${data.Description}
 
   ## Installation
-    ${data.Installation}
+  ${data.Installation}
 
   ## Usage Information
-    ${data.Usage}
+  ${data.Usage}
 
   ## Contribution Guidelines
-    ${data.Contribution}
+  ${data.Contribution}
 
   ## Test Instructions
-    ${data.Test}
+  ${data.Test}
 
   ## License
-    ${data.license}
+  This project is under the ${data.license} license. The button below will bring you to a link outlining the license.
+  [![License](https://img.shields.io/badge/License-${data.license}-blue.svg)](https://opensource.org/licenses/${data.license})
 
   ## Questions
-    ${data.Questions}
+  For any questions please send issues to [https://github.com/${data.github}](https://github.com/${data.github}) or email me at ${data.email}.
 `));
 
 
