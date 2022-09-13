@@ -47,11 +47,6 @@ inquirer
     },
     {
       type: "input",
-      name: "Questions",
-      message: "Write your questions here",
-    },
-    {
-      type: "input",
       name: "github",
       message: "Enter your github username",
     },
