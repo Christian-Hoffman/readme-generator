@@ -28,7 +28,7 @@ N/A
 N/A
   ## Questions
 [GitHub](https://GitHub.com/Christian-Hoffman) \
-[Email](ChristianDHoffman21@gmail.com)
+[ChristianDHoffman21@gmail.com](mailto:ChristianDHoffman21@gmail.com)
 
   ## Visuals
 ![Generated README](./images/generatesREADME.png)

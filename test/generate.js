@@ -96,7 +96,7 @@ inquirer
   [![License](https://img.shields.io/badge/License-${data.license}-blue.svg)](https://opensource.org/licenses/${data.license})
 
   ## Questions
-  For any questions please send issues to [https://github.com/${data.github}](https://github.com/${data.github}) or email me at ${data.email}.
+  For any questions please send issues to [https://github.com/${data.github}](https://github.com/${data.github}) or email me at [${data.email}](mailto:${data.email}).
 `));
 
 
