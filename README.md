@@ -31,4 +31,5 @@ N/A
 [ChristianDHoffman21@gmail.com](mailto:ChristianDHoffman21@gmail.com)
 
   ## Visuals
+[Link to video walkthrough](https://drive.google.com/file/d/1j6pYf9zHQDqo5PgufS10m3EQCoapYTBh/view)
 ![Generated README](./images/generatesREADME.png)
