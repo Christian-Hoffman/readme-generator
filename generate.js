@@ -1,8 +1,9 @@
+// brings in required module
 const fs = require("fs");
 const inquirer = require("inquirer");
 const prompt = inquirer.createPromptModule();
 
-
+// prompts for user to answer
 inquirer
   .prompt([
     {
