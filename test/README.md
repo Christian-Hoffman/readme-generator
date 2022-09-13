@@ -1,4 +1,4 @@
-# Sample title
+# sample title
     
   [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
@@ -13,23 +13,23 @@
 
 
   ## Description
-  This is where your descrition will be
+  description here
 
   ## Installation
-  How to install will be here
+  installation instructions here
 
   ## Usage Information
-  How to use will be here
+  usage here
 
   ## Contribution Guidelines
-  How to contribute will be here
+  contribution here
 
   ## Test Instructions
-  Testing instructions will be here
+  test here
 
   ## License
   This project is under the MIT license. The button below will bring you to a link outlining the license.
   [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
   ## Questions
-  For any questions please send issues to [https://github.com/Christian-Hoffman](https://github.com/Christian-Hoffman) or email me at ChristianDHoffman21@gmail.com.
+  For any questions please send issues to [https://github.com/(github username here)](https://github.com/(github username here)) or email me at [(email here)](mailto:(email here)).
