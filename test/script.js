@@ -2,19 +2,21 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 const prompt = inquirer.createPromptModule();
 
-// // TODO: Create a function that returns a license badge based on which license is passed in
-// // If there is no license, return an empty string
-// function renderLicenseBadge(license) {}
-
-// // TODO: Create a function that returns the license link
-// // If there is no license, return an empty string
-// function renderLicenseLink(license) {}
-
 // // TODO: Create a function that returns the license section of README
 // // If there is no license, return an empty string
-// function renderLicenseSection(license) {}
+function renderLicenseLink(license) {
+  if (license === 'MIT') {
 
-// // TODO: Create a function to generate markdown for README
+  }
+  if (license === 'apache2.0') {
+
+  }
+  if (license === 'unlicense') {
+
+  }
+}
+
+
 
 inquirer
   .prompt([
@@ -29,8 +31,8 @@ inquirer
       message: "What license will you use?",
       choices: [
         "MIT", 
-        "o", 
-        "m"
+        "apache2.0", 
+        "unlicense"
     ],
     },
     {
@@ -63,10 +65,17 @@ inquirer
       name: "Questions",
       message: "Write your questions here",
     },
+    // {
+    //   type: "input",
+    //   name: "",
+    //   message: "",
+    // },
   ])
   .then((data) => fs.writeFileSync('testREADME.md', 
   `# ${data.title}
     
+  [![License](https://img.shields.io/badge/License-${data.license}-blue.svg)](https://opensource.org/licenses/${data.license})
+
   ## Table on Contents
   1. [Description](#description)
   2. [Installation](#installation)
@@ -75,6 +84,7 @@ inquirer
   5. [Test Instructions](#test-instructions)
   6. [License](#license)
   7. [Questions](#questions)
+
 
   ## Description
     ${data.Description}
